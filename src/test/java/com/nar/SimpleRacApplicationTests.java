@@ -1,4 +1,4 @@
-package com.naryaz;
+package com.nar;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -1,4 +1,4 @@
-package com.naryaz.controller;
+package com.nar.controller;
 
 import java.util.HashMap;
 import java.util.Map;

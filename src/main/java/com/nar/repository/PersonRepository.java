@@ -1,6 +1,6 @@
-package com.naryaz.repository;
+package com.nar.repository;
 
-import com.naryaz.model.Person;
+import com.nar.model.Person;
 import java.util.List;
 import org.springframework.data.repository.CrudRepository;
 

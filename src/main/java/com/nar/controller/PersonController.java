@@ -1,7 +1,7 @@
-package com.naryaz.controller;
+package com.nar.controller;
 
-import com.naryaz.model.Person;
-import com.naryaz.repository.PersonRepository;
+import com.nar.model.Person;
+import com.nar.repository.PersonRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;

@@ -1,4 +1,4 @@
-package com.naryaz.model;
+package com.nar.model;
 
 import java.io.Serializable;
 import javax.persistence.Entity;

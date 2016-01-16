@@ -1,7 +1,7 @@
-package com.naryaz.util;
+package com.nar.util;
 
-import com.naryaz.model.Person;
-import com.naryaz.repository.PersonRepository;
+import com.nar.model.Person;
+import com.nar.repository.PersonRepository;
 import javax.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
