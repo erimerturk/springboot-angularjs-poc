@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Hello AngularJS</title>
+    <link href="/webjars/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="screen"/>
+    <style type="text/css">
+        [ng\:cloak], [ng-cloak], .ng-cloak {
+            display: none !important;
+        }
+    </style>
+</head>
+
+<body ng-app="nar-rac" ng-cloak class="ng-cloak">
+    <div ng-controller="navigation" class="container">
+        <ul class="nav nav-pills" role="tablist">
+            <li class="active"><a href="#/">home</a></li>
+            <li><a href="#/login">login</a></li>
+            <li ng-hide="authenticated"><a href="#/signUp" >Sign Up</a></li>
+            <li ng-show="authenticated"><a href="" ng-click="logout()">logout</a></li>
+        </ul>
+    </div>
+    <div ng-view class="container"></div>
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script src="/webjars/angularjs/1.4.8/angular.js"></script>
+    <script src="/webjars/angularjs/1.4.8/angular-route.js"></script>
+    <script src="js/apps.js"></script>
+</body>
+</html>

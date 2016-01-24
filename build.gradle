@@ -31,7 +31,9 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-data-jpa')
 	compile('org.springframework.boot:spring-boot-starter-web')
 	compile("org.springframework.boot:spring-boot-starter-thymeleaf")
+	compile("org.springframework.boot:spring-boot-starter-security")
     compile("net.sourceforge.nekohtml:nekohtml:1.9.21")
+    compile("org.apache.commons:commons-lang3:3.4")
 
 	compile("com.h2database:h2")
 	compile('org.webjars:angularjs:1.4.8')
