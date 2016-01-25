@@ -38,6 +38,54 @@ narRacApp.controller('SignUpController', function ($rootScope, $scope, $http, $l
 });
 
 narRacApp.controller('home', function ($scope, $http) {
+
+    $scope.newPerson = {};
+    $scope.editPerson = {};
+
+
+    $scope.loadPersons = function(){
+        $http.get('persons')
+            .success(function(data, status, headers, config) {
+                $scope.persons = data;
+            })
+            .error(function(data, status, headers, config) {
+                alert('Error loading Persons');
+            });
+    };
+
+    $scope.loadPerson = function(person){
+        $http.get('persons/'+person.id)
+            .success(function(data, status, headers, config) {
+                $scope.editPerson = data;
+            })
+            .error(function(data, status, headers, config) {
+                alert('Error loading Person');
+            });
+    };
+
+    $scope.updatePerson = function(){
+        $http.post('persons',$scope.editPerson)
+            .success(function(data, status, headers, config) {
+                $scope.editPerson = {};
+                $scope.loadPersons();
+            })
+            .error(function(data, status, headers, config) {
+                alert('Error update');
+            });
+    };
+
+    $scope.deletePerson = function(person){
+        $http.delete('persons/'+person.id)
+            .success(function(data, status, headers, config) {
+                $scope.loadPersons()
+            })
+            .error(function(data, status, headers, config) {
+                alert('Error deleting Person');
+            });
+    };
+
+    $scope.loadPersons();
+
     $http.get('/resource/').success(function (data) {
         $scope.greeting = data;
     })
